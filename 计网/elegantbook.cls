@@ -553,9 +553,8 @@
  	}
 
 
-
 \newenvironment{note}{\par\noindent{\makebox[0pt][r]{\scriptsize\color{red!90}\textdbend\quad}\textbf{\color{second}
-	\ifdefstring{\ELEGANT@lang}{en}{Note}{注意}
+	\ifdefstring{\ELEGANT@lang}{en}{Note}{}
 }}\ifdefstring{\ELEGANT@lang}{en}{\itshape}{\kaishu}}{\par}
 
 \newenvironment{proof}{\par\noindent\textbf{\color{second}
@@ -748,27 +747,20 @@
 \definecolor{CPPGray}  {HTML} {B8B8B8}
 \definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
 \definecolor{frenchplum}{RGB}{190,20,83}
-\lstset{
-	language=c++,
+\lstset{language=[LaTeX]TeX,
+	texcsstyle=*\color{winered},
 	numbers=none,
 	breaklines=true,
-	keywordstyle=\color[RGB]{40,40,255},									% 关键字格式
-	commentstyle=\color{gray},										% 代码注释格式
-	emph={map,set,multimap,multiset,unordered_map,unordered_set,unordered_multiset,unordered_multimap,vector,string,list,deque,
-    array,stack,forwared_list,iostream,memory,shared_ptr,unique_ptr,random,bitset,ostream,istream,cout,cin,endl,move,default_random_engine,
-    uniform_int_distribution,iterator,algorithm,functional,bing,numeric,stdio,.h,fflush,printf,scanf,puts,strcmp},			% 标准库
-	emphstyle=\color{CPPViolet},
-	morekeywords={alignas,continute,friend,register,true,alignof,decltype,goto,reinterpret_cast,try,asm,defult,if,return,typedef,auto,delete,inline,short,
-    typeid,bool,do,int,signed,typename,break,double,long,sizeof,union,case,dynamic_cast,mutable,static,unsigned,catch,else,namespace,static_assert,using,char,enum,new,static_cast,virtual,char16_t,char32_t,explict,noexcept,struct,void,export,nullptr,switch,
-    volatile,class,extern,operator,template,wchar_t,const,false,private,this,while,constexpr,float,protected,thread_local,
-    const_cast,for,public,throw,std,},
+	keywordstyle=\color{winered},
+	commentstyle=\color{gray},
+	emph={elegantpaper,fontenc,fontspec,xeCJK,FiraMono,xunicode,newtxmath,figure,fig,image,img,table,itemize,enumerate,newtxtext,newtxtt,ctex,microtype,description,times,newtx,booktabs,tabular,PDFLaTeX,XeLaTeX,type1cm,BibTeX,device,color,mode,lang,amsthm,tcolorbox,titlestyle,cite,marginnote,ctex,listings},
+	emphstyle={\color{frenchplum}},
+	morekeywords={DeclareSymbolFont,SetSymbolFont,toprule,midrule,bottomrule,institute,version,includegraphics,setmainfont,setsansfont,setmonofont ,setCJKmainfont,setCJKsansfont,setCJKmonofont,RequirePackage,figref,tabref,email,maketitle,keywords,definecolor,extrainfo,logo,cover,subtitle,appendix,chapter,hypersetup,mainmatter,tableofcontents,elegantpar,numbers,authoryear,heiti,kaishu,lstset,pagecolor,zhnumber,marginpar,part,equote},
 	frame=single,
 	tabsize=2,
 	rulecolor=\color{structurecolor},
 	framerule=0.2pt,
 	columns=flexible,
-	showstringspaces=false,                              % 不显示字符串中的空格
-	% stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},   % 设置字符串格式
 	% backgroundcolor=\color{lightgrey}
 }
 
